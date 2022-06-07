@@ -1,0 +1,7 @@
+{
+  "name": "Mconecta",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
