@@ -1,11 +1,54 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>evento</ion-title>
+    <ion-title>Envianos tu denuncia!</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-button (click)="guardarEvento()" expand="block" fill="clear" shape="round">
-  Click me
-</ion-button>
+
+  <ion-item>
+    <ion-label position="floating">Titulo/Asunto</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label position="floating">Ingresa mas informacion sobre el problema</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position='start'>fotografia:</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="usuario.foto=''" expand="block" fill="clear" shape="round">
+        <ion-icon color="danger" slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <label for="file-upload">
+          <ion-icon slot="icon-only" name="image"></ion-icon>
+        </label>
+        <input (change)="newImagePro($event)" id="file-upload" style="display: none;" type="file" accept="image/*">
+      </ion-button>
+
+    </ion-buttons>
+  </ion-item>
+
+
+
+<!--enviar evento  -->
+  <ion-button (click)="guardarEvento()" expand="block" fill="clear" shape="round">
+    Enviar denuncia
+  </ion-button>
+
+
+
+
+
+
+
+
+
+
 </ion-content>
